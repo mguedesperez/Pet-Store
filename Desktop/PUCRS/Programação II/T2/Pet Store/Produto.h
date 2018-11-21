@@ -7,12 +7,19 @@ class Produto{
         int codigo;
         string descricao;
         float valor;
+        int quantidade;
 
     public:
         Produto (int codigo, string descricao, float valor){
             this->codigo = codigo;
             this->descricao = descricao;
             this->valor = valor;
+        }
+        Produto (int codigo, string descricao, float valor, int quantidade){
+            this->codigo = codigo;
+            this->descricao = descricao;
+            this->valor = valor;
+            this->quantidade = quantidade;
         }
 
         void setCodigo (int codigo){
@@ -27,12 +34,16 @@ class Produto{
         string getDescricao (){
             return descricao;
         }
-        void setValor (string valor){
+        void setValor (float valor){
             this->valor = valor;
         }
         float getValor (){
-            return Valor;
+            return valor;
         }
-    
-
-}
+        void setQuantidade (int quantidade){
+            this->quantidade = quantidade;
+        }
+        int getQuantidade (){
+            return quantidade;
+        }
+};

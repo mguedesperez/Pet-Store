@@ -1,6 +1,6 @@
 #include <iostream>
-#include <Cliente.h>
-#include <Produto.h>
+#include "Cliente.h"
+#include "Produto.h"
 
 using namespace std;
 
@@ -8,14 +8,14 @@ class Venda{
     private:
         int codigo;
         Cliente cliente;
-        Produto produto;
+        vector<Produto> produtos;
         int quantidade;
 
     public:
-        Venda(int codigo, Cliente cliente, Produto produto, int quantidade){
+        Venda(int codigo, Cliente cliente, vector<Produto> produtos, int quantidade){
             this->codigo = codigo;
             this->cliente = cliente;
-            this->produto = produto;
+            this->produtos = produtos;
             this->quantidade = quantidade;
         }
 
@@ -31,10 +31,10 @@ class Venda{
         Cliente getCliente (){
             return cliente;
         }
-        void setProduto (Produto produto){
-            this->produto = produto;
+        void setProdutos (vector<Produto> produtos){
+            this->produtos = produtos;
         }
-        Produto getProduto (){
+        vector<Produto> getProdutos (){
             return produto;
         }
         void setQuantidade (int quantidade){
@@ -43,4 +43,5 @@ class Venda{
         int getQuantidade (){
             return quantidade;
         }
-}
+
+};
